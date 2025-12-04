@@ -12,8 +12,7 @@ import { doc, getDoc, collection, addDoc, deleteDoc, getDocs, query, orderBy } f
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { ClipboardDocumentIcon, ArrowPathIcon, ClockIcon, ArrowRightOnRectangleIcon } from '@heroicons/react/24/outline';
 import { CheckCircleIcon, TrashIcon, UserCircleIcon } from '@heroicons/react/24/solid';
-import { Analytics } from "@vercel/analytics/react"
-
+import { Analytics } from "@vercel/analytics/next"
 // Placeholder logo
 const TA_LOGO_SVG = (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" className="w-full h-full">
