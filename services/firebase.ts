@@ -5,13 +5,13 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDoX-RsMVtlBEMyQqSuR2KLjyVXKD1nqL0",
-  authDomain: "sh4mani4k.firebaseapp.com",
-  projectId: "sh4mani4k",
-  storageBucket: "sh4mani4k.firebasestorage.app",
-  messagingSenderId: "634411208599",
-  appId: "1:634411208599:web:c5db017a257c51b3e6bed2",
-  measurementId: "G-50NJ577W18"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
@@ -24,9 +24,9 @@ const googleProvider = new GoogleAuthProvider();
 let analytics = null;
 if (typeof window !== 'undefined' && (firebaseAnalytics as any).getAnalytics) {
   try {
-      analytics = (firebaseAnalytics as any).getAnalytics(app);
+    analytics = (firebaseAnalytics as any).getAnalytics(app);
   } catch (e) {
-      console.warn("Firebase Analytics failed to initialize", e);
+    console.warn("Firebase Analytics failed to initialize", e);
   }
 }
 
